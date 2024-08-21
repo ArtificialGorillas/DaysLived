@@ -1,0 +1,33 @@
+﻿<Window x:Class="DaysYouveLived.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DaysYou'veLived" Height="1080" Width="1920"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        KeyDown="Window_KeyDown">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FF42A5F5" Offset="0.0" />
+            <GradientStop Color="#FF7E57C2" Offset="0.5" />
+            <GradientStop Color="#FFEF5350" Offset="1.0" />
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid Margin="50">
+        <Border Background="#FFFFFFCC" CornerRadius="20" Padding="20" BorderBrush="#FFC107" BorderThickness="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Enter your birthdate (MM/DD/YYYY):" FontSize="36" Margin="0,0,0,20" Foreground="#37474F" FontWeight="Bold"/>
+                <TextBox Name="BirthdateTextBox" FontSize="36" Width="600" Margin="0,0,0,20" Padding="10" BorderThickness="2" BorderBrush="#FFC107" Background="#FFEBEE"/>
+                <Button Content="Calculate Days Lived" FontSize="36" Click="CalculateDaysLived_Click" Width="600" Height="100" Margin="0,0,0,20" Padding="10"
+                        Background="#4CAF50" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                <TextBlock Name="ResultTextBlock" FontSize="36" Margin="0,20,0,20" Foreground="#D32F2F" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,40,0,0">
+                    <Button Content="Play Again" FontSize="36" Click="PlayAgain_Click" Width="200" Height="75" Margin="0,0,20,0"
+                            Background="#FFC107" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Exit" FontSize="36" Click="Exit_Click" Width="200" Height="75"
+                            Background="#FF5252" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
